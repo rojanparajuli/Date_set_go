@@ -11,13 +11,13 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: TextField(
               decoration: InputDecoration(
                 hintText: ('Search'),
-                border: OutlineInputBorder(),
+                border: const OutlineInputBorder(),
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.search_sharp, color: Colors.black),
+                  icon: const Icon(Icons.search_sharp, color: Colors.black),
                   onPressed: () {},
                 ),
               ),

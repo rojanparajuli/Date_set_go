@@ -11,20 +11,23 @@ class ChatApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
-      home: ChatPage(),
+      home: const ChatPage(),
     );
   }
 }
 
 class ChatPage extends StatefulWidget {
+  const ChatPage({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _ChatPageState createState() => _ChatPageState();
 }
 
 class _ChatPageState extends State<ChatPage> {
   List<String> messages = [];
 
-  TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _textEditingController = TextEditingController();
 
   void _sendMessage(String message) {
     setState(() {
@@ -37,22 +40,22 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('prayash'),
+        title: const Text('prayash'),
         actions: [
           IconButton(
-            icon: Icon(Icons.video_call),
+            icon: const Icon(Icons.video_call),
             onPressed: () {
               // Handle video call action
             },
           ),
           IconButton(
-            icon: Icon(Icons.phone),
+            icon: const Icon(Icons.phone),
             onPressed: () {
               // Handle voice call action
             },
           ),
           IconButton(
-            icon: Icon(Icons.info),
+            icon: const Icon(Icons.info),
             onPressed: () {
               // Handle info  action
             },
@@ -72,24 +75,24 @@ class _ChatPageState extends State<ChatPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
                 Expanded(
                   child: TextField(
                     controller: _textEditingController,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: 'Type a message',
                     ),
                   ),
                 ),
                  IconButton(
-                  icon: Icon(Icons.favorite, color: Colors.pink,),
+                  icon: const Icon(Icons.favorite, color: Colors.pink,),
                   onPressed: () {
                   },
                 ),
                  IconButton(
-                  icon: Icon(Icons.send),
+                  icon: const Icon(Icons.send),
                   onPressed: () {
                     _sendMessage(_textEditingController.text);
                   },

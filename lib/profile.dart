@@ -8,11 +8,11 @@ class Profile extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('Profile'),
+        title: const Text('Profile'),
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Center(
@@ -20,30 +20,30 @@ class Profile extends StatelessWidget {
             height: 300,
             width: 300,
           )),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
-          Text(
+          const Text(
             'NAME:Prayash Rimal',
             style: TextStyle(
                 fontSize: 40, color: Colors.pink, fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Text('gender: Male', style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          SizedBox(
+          const Text('gender: Male', style:TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+          const SizedBox(
             height: 5,
           ),
-          Text('Age:45', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          SizedBox(
+          const Text('Age:45', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+          const SizedBox(
             height: 5,
           ),
-          Text('Address:Newyork, USA', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-          SizedBox(
+          const Text('Address:Newyork, USA', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+          const SizedBox(
             height: 200,
           ),
-          Text('DATE SET GO'),
+          const Text('DATE SET GO'),
          
         ],
       ),

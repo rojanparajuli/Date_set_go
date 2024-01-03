@@ -15,11 +15,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
         actions: [
           IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatInbox()));
-          }, icon: Icon(Icons.message, color: Colors.blue,))
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> const ChatInbox()));
+          }, icon: const Icon(Icons.message, color: Colors.blue,))
         ],
         
       ),
@@ -28,9 +28,9 @@ class HomePage extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const Profile()));
                   },
-                  child: UserAccountsDrawerHeader(
+                  child: const UserAccountsDrawerHeader(
                     accountName: Text('Prayash Rimal'),
                     accountEmail: Text('Home'),
                     currentAccountPicture: CircleAvatar(
@@ -40,33 +40,33 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  title: Text('Settings'),
-                  leading: Icon(Icons.settings),
+                  title: const Text('Settings'),
+                  leading: const Icon(Icons.settings),
                   onTap: (){
                   
                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SettingPage()));
                   },
                 ),
                 ListTile(
-                  title: Text('Profile'),
-                  leading: Icon(Icons.person),
+                  title: const Text('Profile'),
+                  leading: const Icon(Icons.person),
                   onTap: () {
                     
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const Profile()));
                   },
                 ),
                 ListTile(
-                  title: Text('Logout'),
-                  leading: Icon(Icons.logout),
+                  title: const Text('Logout'),
+                  leading: const Icon(Icons.logout),
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const LoginPage()));
                   },
                 ),
-                ListTile(
+                const ListTile(
                   title: Text('Report'),
                   leading: Icon(Icons.report),
                 ),
-                 ListTile(
+                 const ListTile(
                   title: Text('About'),
                   leading: Icon(Icons.book),
                 ),

@@ -23,9 +23,9 @@ class Homepage extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const Profile()));
                   },
-                  child: UserAccountsDrawerHeader(
+                  child: const UserAccountsDrawerHeader(
                     accountName: Text('Prayash Rimal'),
                     accountEmail: Text('Home'),
                     currentAccountPicture: CircleAvatar(
@@ -35,33 +35,33 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
                 ListTile(
-                  title: Text('Settings'),
-                  leading: Icon(Icons.settings),
+                  title: const Text('Settings'),
+                  leading: const Icon(Icons.settings),
                   onTap: (){
                   
                    Navigator.push(context, MaterialPageRoute(builder: (context)=> SettingPage()));
                   },
                 ),
                 ListTile(
-                  title: Text('Profile'),
-                  leading: Icon(Icons.person),
+                  title: const Text('Profile'),
+                  leading: const Icon(Icons.person),
                   onTap: () {
                     
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Profile()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const Profile()));
                   },
                 ),
                 ListTile(
-                  title: Text('Logout'),
-                  leading: Icon(Icons.logout),
+                  title: const Text('Logout'),
+                  leading: const Icon(Icons.logout),
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const LoginPage()));
                   },
                 ),
-                ListTile(
+                const ListTile(
                   title: Text('Report'),
                   leading: Icon(Icons.report),
                 ),
-                 ListTile(
+                 const ListTile(
                   title: Text('About'),
                   leading: Icon(Icons.book),
                 ),
@@ -94,11 +94,11 @@ class Homepage extends StatelessWidget {
 
             
             children: [
-            HomePage(),
+            const HomePage(),
             Container(),
             Container(),
             NotificationPage(),
-            MyHomePage(),
+            const MyHomePage(),
           ])
         ),
       ),
