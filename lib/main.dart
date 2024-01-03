@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sampleflutter/drawer.dart';
 import 'package:sampleflutter/login.dart';
 
-Color myColor = Color(0xFF123456);
+Color myColor = const Color(0xFF123456);
 void main(){
-  return runApp(MyApp());
+  return runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
